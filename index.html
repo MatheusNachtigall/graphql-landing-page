@@ -47,10 +47,12 @@
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <a href="#examples_queries" class="btn btn-outline-success btn-lg px-4">Queries</a>
             <a href="#examples_mutations" class="btn btn-outline-danger btn-lg px-4">Mutations</a>
-            <a href="#examples_mutations" class="btn btn-outline-danger btn-lg px-4" data-mdb-smooth-scroll>Mutations</a>
           </div>
         </div>
       </div>
+
+
+      
 
   <div class="b-example-divider"  id="apollo"></div>
   
@@ -64,6 +66,12 @@
     <div class="container px-5">
       <img src="./index_files/playground_screenshot.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
     </div>
+
+    <a 
+      target="_blank" class="btn btn-outline-light btn-lg px-4 mt-3"
+      href="https://graphql-playground.cyclic.app/graphql">
+      https://graphql-playground.cyclic.app/graphql
+    </a>
   </div>
   
   <div class="b-example-divider" id="graphql_rest"></div>
@@ -118,6 +126,13 @@
         <p class="lead">
           Retrieve the all the users names, emails, and a list of their posts (and when they were created)
         </p>
+
+        <a 
+          target="_blank" class="btn btn-outline-light btn-lg px-4 mt-3"
+          href="https://graphql-playground.cyclic.app/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4QEcYIE4CeABAGIIpQAWAqgM760CCSYAChLSrUcADp68kRIjHp5ufAUOFEkAQ0T9BMogjhyAlgBsl04QAcOXHrpXCUGlFoSmzUPAjkoEYAPpPbwgL62fUryBeQA">
+          Try it out!
+        </a>
+
       </div>
       <div class="col-lg-1"></div>
       <div class="col-lg-4 ">
@@ -138,6 +153,12 @@
         <p class="lead">
           Retrieve the all the posts where the title has the word “setup” in it, along with all the categories that this post was tagged with. To finish it off, we want this list to be ordered by the post's title, in an asceding manner.
         </p>
+
+        <a 
+          target="_blank" class="btn btn-outline-light btn-lg px-4 mt-3"
+          href="https://graphql-playground.cyclic.app/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4QEcYIE4CeABAGIIpQAWAChAM4p0CCSYAwgIYoIDmEeASwR1gAHSREiAB3qMAFOMmiUAd0r4E6IsCKLJ%2BlAJQAbTdr379UCKg4CkdLaJB1yMKc4v6AvnuXeAGj8UfjB8ACECdABtMQlLIkMTMw46KGDvAF09AEpzeMkk0y8oLl5%2BITp8hKIkDkQvX3im7xBvIA">
+          Try it out!
+        </a>
       </div>
       <div class="col-lg-1"></div>
       <div class="col-lg-4 ">
@@ -156,6 +177,12 @@
         <p class="lead">
           Count the number of users that have at least one post with the category “Setup” 
         </p>
+
+        <a 
+          target="_blank" class="btn btn-outline-light btn-lg px-4 mt-3"
+          href="https://graphql-playground.cyclic.app/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4QEcYIE4CeABAMIQyoCCANtQKoDO%2BDA6gJYoAWAChAygzKoAhmyRiA5pRLCUCCRELAAOkiJFhEiXnmyEjfAApV69QHdO%2BBOiIq1p9QAc%2BAm8CImHphhERuP9l6mUHoKeGwIDP6eQQ4%2BfrYxsQ5Iwgl2yckIOMLUUR4gAMoIKDCOyiABmV4AvlXVRDVJQU2Btc2NSa3qAJSJbQD6UOSo-UFsYF2erTUgNUA">
+          Try it out!
+        </a>
       </div>
       <div class="col-lg-1"></div>
       <div class="col-lg-5 ">
@@ -187,6 +214,12 @@
         <p class="lead">
           Create a new User with a name and email, and at the same time create a new Post “Mobile Setup”, while connecting this post with the already existing Category “Setup”. Finally, after creation, we want graphQL to return the “id” field of this new user.
         </p>
+
+        <a 
+          target="_blank" class="btn btn-outline-light btn-lg px-4 mt-3"
+          href="https://graphql-playground.cyclic.app/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4RxighigSwiQAIBhAJwXwQHkkEBVAZwQpOAB1SSoqb6TVhQAU3EhJJh8udB3GSJSXIjmcQAOQQB3EizbqFihHFwEANmpANtMYQAETZ8wDooEOIZ6KADhGYozHJc3oq8-CgIcgDaIWFhhCjmUSTqALIQAEYWCCSsKDA%2BXvGKnChQNADmEBQECEHyoSWS7kgMUCgxwKlNzZLKqqkgAMoIBUUgPX1hAL4AulPNZTNGs3OrEiuhWxIAlI2KBGAKWzMgM0A">
+          Try it out!
+        </a>
       </div>
       <div class="col-lg-1"></div>
       <div class="col-lg-4 ">
@@ -205,8 +238,14 @@
       <div class="col-lg-3">
         <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-4" >Create User with a post and create/connect a category </h1>
         <p class="lead">
-          similar to the previous one, but now this mutation first tries to find an existing category called “Wireframes”.  If that category doesn’t exists, it automatically creates it and links the post to it.
+          Similar to the previous one, but now this mutation first tries to find an existing category called “Wireframes”.  If that category doesn't exists, it automatically creates it and links the post to it.
         </p>
+
+        <a 
+          target="_blank" class="btn btn-outline-light btn-lg px-4 mt-3"
+          href="https://graphql-playground.cyclic.app/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4RxighigSwiQAIBhAJwXwQEEkIUALBCgVQGdWTgAdUklCo0A8kgSdWACn4k5JMPlzoes%2BXKS5EK3iHqMWFEpIq616hHFwEANjpC4GzVjC4UAApes2AdFAhwZgLqAA4QHCgcKnzB6oLCKAgqANrmcXIx6emEKDZJJLoA6gRUAGYUWggkXCgwIUFZcVA0AOYQFAQIUaqxjXL%2BSOJQKCIUlNSJKWl98sAFvTPyAO6G%2BXOa2gUgxWUViLokAL4ANNOL-QlrJBv5RSUI5ZUHh2eNvCgvC40Auq9xnzMAVlfgsgXIgQBKHrqAhgNSfQ4gQ5AA">
+          Try it out!
+        </a>
       </div>
       <div class="col-lg-1"></div>
       <div class="col-lg-5 ">
