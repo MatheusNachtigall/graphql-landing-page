@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Matheus Nachtigall">
+    <title>GraphQL PlayGround</title>
+
+    <link rel="stylesheet" href="./index_files/css@3">
+
+    <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="icon" href="./index_files/GraphQL_Logo.svg.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="./index_files/GraphQL_Logo.svg.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="./index_files/GraphQL_Logo.svg.png">
+    <meta name="theme-color" content="#712cf9">
+      
+    <link href="./index_files/heroes.css" rel="stylesheet">
+  
+  </head>
+  <body>
+    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+
+
+    
+    
+    <main>
+      <h1 class="visually-hidden"></h1>
+      
+      <div class="px-4 py-5 my-5 text-center">
+        <img src="./index_files/GraphQL_Logo.svg.png" class="d-block mx-auto" alt="Example image" width="200" height="200" loading="lazy">
+        <h1 class="display-5 fw-bold text-body-emphasis mt-4">GraphQL PlayGround</h1>
+        <div class="col-lg-10 mx-auto">
+          <p class="lead mb-4">This GraphQL Playground website was designed to provide you with a hands-on learning experience for GraphQL. With it, you can access queries and mutations and will be able to read, create, update, and delete users, posts, and categories. Whether you are a seasoned developer or just starting with GraphQL, this documentation will guide you through some functionalities of how we intend to built our project, allowing you to prepare for it beforehand.</p>
+        </div>
+        <div class="col-lg-12 mx-auto mb-3">
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="#apollo" class="btn btn-primary btn-lg px-4 gap-3">Apollo GraphQL Playground</a>
+            <a href="#graphql_rest" class="btn btn-primary btn-lg px-4 gap-3">GraphQL vs. REST</a>
+            <a href="#queries_mutations" class="btn btn-primary btn-lg px-4 gap-3">Queries & Mutations</a>
+          </div>
+        </div>
+        <div class="col-lg-12 mx-auto">
+          <h1 class="display-6 fw-bold text-body-emphasis mt-4 mb-3">Examples</h1>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="#examples_queries" class="btn btn-outline-success btn-lg px-4">Queries</a>
+            <a href="#examples_mutations" class="btn btn-outline-danger btn-lg px-4">Mutations</a>
+            <a href="#examples_mutations" class="btn btn-outline-danger btn-lg px-4" data-mdb-smooth-scroll>Mutations</a>
+          </div>
+        </div>
+      </div>
+
+  <div class="b-example-divider"  id="apollo"></div>
+  
+  <div class="px-4 my-5 text-center">
+    <h2 class="display-5 fw-bold text-body-emphasis">Apollo GraphQL Playground?</h2>
+    <div class="col-lg-10 mx-auto">
+      <p class="lead mb-4">
+        Apollo GraphQL Playground is a powerful web-based development environment and interactive API documentation tool for GraphQL. It allows developers to explore, test, and interact with a GraphQL API directly from their web browser. The Playground provides an intuitive user interface where developers can write GraphQL queries and mutations, view the schema, and see real-time results. It also offers features like autocomplete, syntax highlighting, and query validation, making it easier to experiment with GraphQL APIs and understand their capabilities. The Playground is a valuable tool for developers working with GraphQL, as it streamlines the development process and facilitates collaboration with API providers.
+      </p>
+    </div>
+    <div class="container px-5">
+      <img src="./index_files/playground_screenshot.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+    </div>
+  </div>
+  
+  <div class="b-example-divider" id="graphql_rest"></div>
+
+  <div class="px-4 my-5 text-center" >
+    <h1 class="display-5 fw-bold text-body-emphasis"><span style="color: #01b5e6;">REST</span> vs. <span style="color: #de33a6;">GraphQL</span></h1>
+    <div class="col-lg-10 mx-auto">
+      <p class="lead mb-4">
+        While REST API methods (such as GET, POST, PUT, and DELETE) typically map to specific CRUD (Create, Read, Update, Delete) operations, GraphQL utilizes Queries and Mutations to manipulate data.
+        The main difference lies in their approach: GraphQL provides a single endpoint for all data operations, allowing clients to request exactly what they need with a single query or mutation, while REST APIs use multiple endpoints for different resources and actions, potentially leading to over-fetching or under-fetching of data.
+      </p>
+    </div>
+  </div>
+
+  <div class="b-example-divider" id="queries_mutations"></div>
+
+  <div class="container col-xxl-8 px-4 py-5" >
+    <div class="row align-items-center g-5 py-5">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" ><span style="color: rgb(60, 135, 60);">Queries</span></h1>
+        <p class="lead">
+          are used to request data from a GraphQL API. They define the structure of the data the client wants to receive in the response and allow clients to specify the exact fields they need, avoiding over-fetching of unnecessary data. Queries are read-only operations and do not modify data on the server.
+        </p>
+      </div>
+
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><span style="color: rgb(144, 41, 41);">Mutations</span></h1>
+        <p class="lead">
+          are used to modify or mutate data on the server. They allow clients to create, update, or delete data by defining the necessary input parameters and specifying the expected fields in the response. Mutations are similar to POST, PUT, and DELETE methods in REST APIs but are more flexible and can handle multiple operations in a single request.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider" id="examples_queries"></div>
+  
+  
+  <div class="px-4 my-5 text-center">
+    <h1 class="display-4 fw-bold text-body-emphasis mb-4 pb-4 border-bottom">Examples</h1>
+    
+    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mt-4" ><span style="color: rgb(60, 135, 60);">Queries</span></h1>
+    <div class="col-lg-7 mx-auto  pb-4">
+      <p class="lead mb-4">
+        The queries on the playground can fetch data from multiple tables, and have a good level of customization, being able to be ordered, filtered, aggregated, etc. To retrieve information about a table, simply construct queries that request specific fields from that object.
+      </p>
+    </div>
+
+    <div class="row align-items-center g-5 py-5">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-3">
+        <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-3" >Fetch Users And Posts </h1>
+        <p class="lead">
+          Retrieve the all the users names, emails, and a list of their posts (and when they were created)
+        </p>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-4 ">
+        <iframe
+          src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=sharp&l=crystal&width=300&ds=false&dsyoff=100px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=18px&lh=158%25&si=false&es=2x&wm=false&code=query%2520FetchUsersAndPosts%2520%257B%250A%2520%2520users%2520%257B%250A%2520%2520%2520%2520name%250A%2520%2520%2520%2520email%250A%2520%2520%2520%2520posts%2520%257B%250A%2520%2520%2520%2520%2520%2520title%250A%2520%2520%2520%2520%2520%2520created_at%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%257D"
+          style="width: 300px; height: 366px; border:0; transform: scale(1); overflow:hidden;"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+
+    <div class="row align-items-center flex-lg-row-reverse g-5 py-5">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-3">
+        <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-3" >Fetch Posts And Categories </h1>
+        <p class="lead">
+          Retrieve the all the posts where the title has the word “setup” in it, along with all the categories that this post was tagged with. To finish it off, we want this list to be ordered by the post's title, in an asceding manner.
+        </p>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-4 ">
+          <iframe
+          src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=sharp&l=crystal&width=350&ds=false&dsyoff=100px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=18px&lh=158%25&si=false&es=2x&wm=false&code=query%2520FetchPostsAndCategories%257B%250A%2520%2520posts%28%250A%2520%2520%2509where%253A%2520%257B%2520%250A%2520%2520%2520%2520%2520%2520title%253A%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520contains%253A%2520%2522setup%2522%250A%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2509%257D%252C%250A%2520%2520%2509orderBy%253A%255B%257B%250A%2520%2520%2520%2520%2520%2520title%253A%2520asc%250A%2520%2520%2509%257D%255D%250A%2520%2520%29%2520%257B%250A%2520%2520%2520%2520title%250A%2520%2520%2520%2520categories%2520%257B%250A%2520%2520%2520%2520%2520%2520name%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%257D"
+          style="width: 350px; height: 565px; border:0; transform: scale(1); overflow:hidden;"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+    <div class="row align-items-center g-5 py-5">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-3">
+        <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-3" >Count Users Based on a Category </h1>
+        <p class="lead">
+          Count the number of users that have at least one post with the category “Setup” 
+        </p>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-5 ">
+        <iframe
+          src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=sharp&l=crystal&width=800&ds=false&dsyoff=100px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=18px&lh=158%25&si=false&es=2x&wm=false&code=query%2520CountAllUsersWithPostsContainingACategory%257B%250A%2520%2520aggregateUser%28%250A%2520%2520%2520%2520where%253A%2520%257B%250A%2520%2520%2520%2520%2520%2520posts%253A%2520%257B%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520some%253A%2520%257B%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520categories%253A%2520%257B%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520some%253A%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520name%253A%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520equals%253A%2520%2522Setup%2522%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%257D%250A%2520%2520%29%2520%257B%250A%2520%2520%2520%2520_count%2520%257B%250A%2520%2520%2520%2520%2520%2520id%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%257D"
+          style="width: 800px; height: 650px; border:0; transform: scale(1); overflow:hidden;"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
+      </div>
+      <div class="col-lg-1"></div>
+    </div>
+  </div>
+  
+  <div class="b-example-divider" id="examples_mutations"></div>
+
+  <div class="px-4 my-5 text-center">
+
+    <h1 class="display-5 fw-bold text-body-emphasis mt-3 lh-1 mb-3"><span style="color: rgb(144, 41, 41);">Mutations</span></h1>
+    <div class="col-lg-7 mx-auto  pb-4">
+      <p class="lead mb-4">
+        The graphql playground can create/insert in multiple tables, creating connections and relations all in a single mutation
+      </p>
+    </div>
+
+    <div class="row align-items-center g-5 py-5">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-3">
+        <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-3" >Create User with a Post</h1>
+        <p class="lead">
+          Create a new User with a name and email, and at the same time create a new Post “Mobile Setup”, while connecting this post with the already existing Category “Setup”. Finally, after creation, we want graphQL to return the “id” field of this new user.
+        </p>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-4 ">
+        <iframe
+          src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=sharp&l=crystal&width=600&ds=false&dsyoff=100px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=18px&lh=158%25&si=false&es=2x&wm=false&code=mutation%2520CreateOneUser%2520%257B%250A%2520%2520createOneUser%28%250A%2520%2520%2520%2520data%253A%2520%257B%250A%2520%2520%2520%2520%2520%2520name%253A%2520%2522New%2520User%2522%250A%2520%2520%2520%2520%2520%2520email%253A%2520%2522newuser%2540email.com%2522%250A%2520%2520%2520%2520%2520%2520posts%253A%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520create%253A%2520%255B%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520title%253A%2520%2522Mobile%2520setup%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509categories%253A%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520connect%253A%2520%255B%257B%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520name%253A%2520%2522Setup%2522%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%255D%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%255D%250A%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%257D%250A%2520%2520%29%2520%257B%250A%2520%2520%2520%2520id%250A%2520%2520%257D%250A%257D"
+          style="width: 480px; height: 622px; border:0; transform: scale(1); overflow:hidden;"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+
+    <div class="row align-items-center flex-lg-row-reverse g-5 py-5">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-3">
+        <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-4" >Create User with a post and create/connect a category </h1>
+        <p class="lead">
+          similar to the previous one, but now this mutation first tries to find an existing category called “Wireframes”.  If that category doesn’t exists, it automatically creates it and links the post to it.
+        </p>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-5 ">
+        <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=sharp&l=crystal&width=800&ds=false&dsyoff=100px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=18px&lh=158%25&si=false&es=2x&wm=false&code=mutation%2520CreateAnotherUser%2520%257B%250A%2520%2520createOneUser%28%250A%2520%2520%2520%2520data%253A%2520%257B%250A%2520%2520%2520%2520%2520%2520name%253A%2520%2522Another%2520User%2522%250A%2520%2520%2520%2520%2520%2520email%253A%2520%2522anotheruser%2540email.com%2522%250A%2520%2520%2520%2520%2520%2520posts%253A%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520create%253A%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520title%253A%2520%2522Wireframe%2520setup%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520categories%253A%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520connectOrCreate%253A%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257B%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520where%253A%2520%257B%2520name%253A%2520%2522Wireframe%2522%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520create%253A%2520%257B%2520name%253A%2520%2522Wireframe%2522%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%255D%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%255D%250A%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%257D%250A%2520%2520%29%2520%257B%250A%2520%2520%2520%2520id%250A%2520%2520%257D%250A%257D"
+        style="width: 800px; height: 764px; border:0; transform: scale(1); overflow:hidden;"
+        sandbox="allow-scripts allow-same-origin">
+      </iframe>
+      </div>
+      <div class="col-lg-1"></div>
+    </div>
+  </div>
+  <div class="b-example-divider mb-0"></div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-dark">
+  <div class="row g-5">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-2">
+      <span class="text-muted">Created by Matheus Nachtigall</span>
+    </div>
+    <div class="col-lg-7"></div>
+    <div class="col-lg-1">
+      <span class="text-muted">
+        <a href="https://github.com/MatheusNachtigall" target="_blank" style="text-decoration: none;">
+          <svg aria-hidden="true" focusable="false" role="img" class="octicon octicon-mark-github" viewBox="0 0 16 16" width="32" height="32" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+        </a>
+      </span>
+    </div>
+    <div class="col-lg-1"></div>
+  </div>
+</footer>
+
+<script src="./index_files/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    
+  <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 20) {
+          $('#toTopBtn').fadeIn();
+        } else {
+          $('#toTopBtn').fadeOut();
+        }
+      });
+
+      $('#toTopBtn').click(function() {
+        $("html, body").animate({
+          scrollTop: 0
+        }, 0);
+        return false;
+      });
+    });
+
+  </script>
+  </body>
+</html>
